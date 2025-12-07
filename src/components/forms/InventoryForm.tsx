@@ -21,7 +21,7 @@ const InventoryForm = ({ closeFunc }: { closeFunc: () => void }) => {
             return
         }
 
-        const userProductRef = collection(db, "users", userId, "product")
+        const userProductRef = collection(db, "users", userId, "products")
 
         const addProductPromise = addDoc(userProductRef, {
             ...data,
