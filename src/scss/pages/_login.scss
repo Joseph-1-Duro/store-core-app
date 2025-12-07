@@ -1,0 +1,50 @@
+@use '../abstract' as *;
+
+.login-page {
+    min-height: 100dvh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient( 
+        45deg, 
+        hsl(0, 0%, 100%), 
+        hsl(39, 77%, 83%),
+        whitesmoke
+    );
+
+    .app-name {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin: 1.5rem;
+        font-style: italic;
+        align-items: center;
+        gap: 8px;
+        color: $brand-clr;
+    }
+
+    .hero {
+        @include ContentWrapper(968px, 3rem);
+
+        .header {
+            margin-block-end: 2rem;
+        }
+
+        &__heading {
+           font-size: clamp(2.5rem, 1.912vw + 1.888rem, 4.5rem);
+           margin-block-end: 1rem;
+        }
+
+        &__sub-heading {
+            font-size: clamp(1.1rem, 0.143vw + 1.054rem, 1.25rem);
+        }
+
+        .sign-in-detail {
+            margin-bottom: 0.75rem;
+        }
+
+        & > * {
+            max-width: 55ch;
+        }
+    }
+
+}

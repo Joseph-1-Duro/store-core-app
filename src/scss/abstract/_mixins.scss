@@ -1,0 +1,31 @@
+// hover on touch devices only
+@mixin HoverOnly {
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+@mixin PlaceItemCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+};
+
+@mixin ContentWrapper($max-width, $inline-margin) {
+  margin-inline: auto;
+  width: min($max-width, 100% - $inline-margin);
+}
+
+@mixin BreakpointDown($size) {
+  @media screen and (width <= $size) {
+    @content;
+  }
+}
+
+@mixin HideOnMobile($size) {
+  @media screen and (width <= $size) {
+    display: none;
+  }
+}

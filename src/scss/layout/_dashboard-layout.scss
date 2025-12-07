@@ -1,0 +1,11 @@
+.dashboard-layout {
+    grid-template-columns: auto 1fr;
+    overflow: hidden;
+    height: 100dvh;
+
+    main {
+        padding: 2rem;
+        overflow-y: auto;
+        position: relative;
+    }
+}

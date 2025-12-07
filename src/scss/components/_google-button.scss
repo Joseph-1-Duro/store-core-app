@@ -1,0 +1,13 @@
+@use "../abstract" as *;
+
+.google-button {
+  background-color: $dark-btn-bg;
+  color: $white;
+  padding: 10px 20px;
+  border-radius: 0.5rem;
+  transition: background-color 350ms ease-in;
+
+  @include HoverOnly {
+    background-color: $brand-clr;
+  }
+}

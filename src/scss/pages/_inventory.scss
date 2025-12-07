@@ -1,0 +1,17 @@
+@use '../abstract' as *;
+
+.inventory {
+    &__header {
+        justify-content: space-between;
+        align-items: end;
+        flex-wrap: wrap;
+        gap: 1rem;
+
+        .add-btn {
+            background-color: $dark-btn-bg;
+            color: $white;
+            padding: 10px 20px;
+            border-radius: 0.5rem;
+        }
+    }
+}

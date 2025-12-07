@@ -1,0 +1,28 @@
+.kpi-card {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+  padding: 1rem;
+  border-radius: 0.625rem;
+  background:  linear-gradient(
+    to right
+    hsl(0, 0%, 100%),
+    hsla(0, 0%, 100%, 0.6)
+  );
+
+  .flex {
+    justify-content: space-between;
+    gap: 6px;
+  }
+
+  &__header {
+    margin-bottom: 3rem;
+    align-items: center;
+  }
+
+  &__body {
+    align-items: end;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+}

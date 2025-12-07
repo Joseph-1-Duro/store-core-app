@@ -1,0 +1,76 @@
+@use '../abstract' as *;
+
+.inventory-form-container {
+    position: absolute;
+    inset: 0;
+    height: 100vh;
+    @include PlaceItemCenter;
+
+    .overlay {
+        position: absolute;
+        inset: 0;
+        background-color: hsla(0, 0%, 10%, 0.7);
+        z-index: 1;
+    }
+    
+    form {
+        // best way for responsive width anywhere
+        width: min(600px, 100% - 2rem);
+        border-radius: 0.625rem;
+        box-shadow:  0 0 8px rgba(0, 0, 0, 0.15);
+        position: relative;
+        z-index: 2;
+        background-color: white;
+        padding: 1.5rem;
+    }
+
+    small {
+        color: rgb(166, 34, 34);
+    }
+
+    .form-header {
+        margin-bottom: 1.5rem;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    label {
+        display: block;
+        font-weight: 700;
+    }
+
+    input, select {
+        width: 100%;
+        display: block;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        border: 1px solid gray;
+    }
+
+
+    .form-group {
+        margin-block-end: 1rem;
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .span-2 {
+        grid-column:  span 2;
+    }
+
+    .close-btn {
+        background-color: rgb(248, 55, 7);
+        color: white;
+        border-radius: 0.625rem;
+        padding: 0.25rem;
+    }
+
+    .submit-btn {
+        padding: 10px 20px;
+        width: 100%;
+        border-radius: 0.5rem;
+        background-color: rgb(142, 208, 44);
+        color: rgb(255, 255, 255);
+    }
+}
